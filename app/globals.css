@@ -1,0 +1,78 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #f5f6fa;
+  --foreground: #171717;
+  --font-poppins: "Poppins", sans-serif;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+ input:checked ~ .radio-checkmark {
+  background-image: url("./assets/icons/check-mark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.custom-checkbox{
+    background-image: url("./assets/icons/check-mark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+.radio-checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+/* ========================== MUI ========================= */
+/* .css-qr6njo-MuiCollapse-root {
+  border-top: 1px solid #d9d9d9 !important;
+} */
+.css-1ll44ll-MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
+}
+.css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input {
+  font-size: 14px !important;
+}
+.MuiCheckbox-checkbox.Mui-checked {
+  background-color: #253a7b !important;
+}
+th,
+td {
+  font-family: var(--font-poppins) !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
